@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="#88868B">
+
+	<TextView android:text="Aim : The entire grid should have only one red bulb enabled"
+		android:textColor="#ffffff" android:padding="5dip" android:gravity="center"
+		android:textSize="15sp" android:layout_gravity="center"
+		android:layout_height="wrap_content" android:layout_width="wrap_content" />
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" >
+
+		<RelativeLayout android:id="@+id/MenuBar"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:padding="0px" android:layout_alignParentTop="true"
+			android:layout_weight="0" android:gravity="center_vertical"
+			android:layout_gravity="center_vertical">
+
+			<GridView android:id="@+id/gridview" android:layout_width="310dip"
+				android:layout_height="310dip" android:numColumns="5"
+				android:verticalSpacing="2dip" android:horizontalSpacing="2dip"
+				android:stretchMode="spacingWidthUniform" android:gravity="center"
+				android:layout_gravity="center" android:padding="5dip" />
+
+		</RelativeLayout>
+
+		<RelativeLayout android:id="@+id/MenuBar1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:padding="0px" android:layout_alignParentTop="true"
+			android:layout_toRightOf="@id/MenuBar" android:layout_weight="1"
+			android:gravity="center_vertical" android:layout_gravity="center_vertical">
+
+			<LinearLayout android:orientation="vertical"
+				android:padding="5dip" android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:gravity="center">
+
+				<LinearLayout android:orientation="horizontal"
+					android:padding="5dip" android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:gravity="center">
+
+					<TextView android:id="@+id/cnt" android:text="Moves : 0"
+						android:textColor="#ffffff" android:padding="5dip"
+						android:gravity="center" android:layout_gravity="center"
+						android:layout_height="wrap_content" android:layout_width="wrap_content" />
+
+					<TextSwitcher android:id="@+id/switcher1"
+						android:gravity="center" android:layout_gravity="center"
+						android:layout_height="wrap_content" android:layout_width="wrap_content" />
+
+				</LinearLayout>
+
+				<TextSwitcher android:id="@+id/switcher"
+					android:layout_gravity="center" android:layout_height="wrap_content"
+					android:layout_width="wrap_content" />
+				<!-- <AnalogClock android:id="@+id/clk" android:layout_height="wrap_content" 
+					android:layout_width="wrap_content" android:padding="5dip" /> -->
+				<LinearLayout android:orientation="horizontal"
+					android:padding="5dip" android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:gravity="center">
+
+					<Button android:id="@+id/start" android:layout_height="80px"
+						android:background="@drawable/btn_black" android:layout_width="120px"
+						android:text="START" android:padding="5dip" android:textColor="#FFFFFF" />
+
+					<Button android:id="@+id/reset" android:layout_height="80px"
+						android:background="@drawable/btn_black" android:layout_width="120px"
+						android:text="RESET" android:padding="5dip" android:textColor="#FFFFFF" />
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</RelativeLayout>
+	</LinearLayout>
+</LinearLayout>
